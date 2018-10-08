@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace TestTimerApp
 {
-    public static class Function1
+    public static class TestTimerTrigger
     {
         [FunctionName("Function1")]
         public static void Run([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer, ILogger log)
