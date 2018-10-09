@@ -24,7 +24,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: ReleaseArtifact@1
+- task: ReleaseArtifact@2
     inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
         artifactName: 'drop' 
