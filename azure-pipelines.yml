@@ -24,9 +24,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: ReleaseArtifact@2
-    inputs:
-        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-        artifactName: 'drop' 
-        publishLocation: '$(Build.ArtifactStagingDirectory)/drop' 
-        #targetPath: # Required when publishLocation == FilePath
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'drop' 
+    publishLocation: '$(Build.ArtifactStagingDirectory)/drop'
