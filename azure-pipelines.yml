@@ -26,6 +26,6 @@ steps:
     
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.SourcesDirectory)/bin/Debug/netstandard2.0/bin' 
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'drop' 
     publishLocation: $(Build.ArtifactStagingDirectory)/drop
