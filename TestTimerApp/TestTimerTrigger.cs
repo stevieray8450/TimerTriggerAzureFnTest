@@ -9,6 +9,7 @@ namespace TestTimerApp
         [FunctionName("TestTimer")]
         public static void Run([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer, ILogger log)
         {
+            Console.WriteLine($"Successfully logged at {DateTime.Now}");
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
         }
     }
